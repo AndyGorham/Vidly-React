@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { getMovies } from "../services/fakeMovieService";
 import { getGenres } from "../services/fakeGenreService";
 import Pagination from "./common/pagination";
@@ -57,7 +58,6 @@ class Movies extends Component {
     this.setState({ sortColumn });
   };
 
-
   render() {
     const { length: count } = this.state.movies;
     const {
@@ -85,6 +85,9 @@ class Movies extends Component {
           />
         </div>
         <div className="col">
+          <Link className="btn btn-primary mb-4" to="/movies/new">
+            New Movie
+          </Link>
           <p>Showing {count} movies in the database.</p>
           <MoviesTable
             movies={movies}
