@@ -9,7 +9,6 @@ import NotFound from "./components/notFound";
 import Navbar from "./components/navbar";
 import LoginForm from "./components/loginForm";
 import RegisterForm from "./components/registerForm";
-import NewMovie from "./components/newMovie";
 
 function App() {
   return (
